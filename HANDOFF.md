@@ -20,4 +20,5 @@
 
 ## Log
 
+- 27 Nov 2026: 32-slide project presentation made from this research (link in README).
 - 27 Nov 2026: repository set up; research knowledge base v1 (Claude).

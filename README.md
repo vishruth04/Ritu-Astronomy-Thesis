@@ -8,6 +8,9 @@ Knowledge base for **Rithikaa P.B.'s** B.Des Interior Design capstone (S102BPROJ
 
 ## Start here
 
+**Project presentation (32 slides):** https://claude.ai/artifact/37hQQEv5xssxzEUDVdK9eT (private to the owner until shared)
+
+
 | You want to | Read |
 |---|---|
 | Know the brief and the topic review | [00_project/brief-and-topic-review.md](00_project/brief-and-topic-review.md) |
