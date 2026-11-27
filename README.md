@@ -10,18 +10,24 @@ Knowledge base for **Rithikaa P.B.'s** B.Des Interior Design capstone (S102BPROJ
 
 **Project presentation (32 slides):** https://claude.ai/artifact/37hQQEv5xssxzEUDVdK9eT (private to the owner until shared)
 
+**Research handbook (clickable, searchable, copy buttons; for Ritu):** https://claude.ai/artifact/72HPZa93bnDzzYyqgnhFJc (private until shared). Rebuild it from this repo with `python3 handbook/build.py out.html` (needs the `markdown` package).
+
 
 | You want to | Read |
 |---|---|
 | Know the brief and the topic review | [00_project/brief-and-topic-review.md](00_project/brief-and-topic-review.md) |
 | See what each review needs | [02_roadmap/review-roadmap.md](02_roadmap/review-roadmap.md) and the [review log](02_roadmap/review-log.md) |
 | Check skills to learn | [03_skills/skills-checklist.md](03_skills/skills-checklist.md) |
+| Prepare for each review | [02_roadmap/review-checklists.md](02_roadmap/review-checklists.md) and [00_project/viva-questions.md](00_project/viva-questions.md) |
+| Plan the written report | [00_project/report-outline.md](00_project/report-outline.md) |
 | Know what the college expects | [01_research/thesis-norms-sathyabama-and-india.md](01_research/thesis-norms-sathyabama-and-india.md) |
 
 ## Research
 
 - Site: [Kodaikanal site and context](01_research/site/kodaikanal-site-and-context.md)
 - Design: [lighting and darkness](01_research/design/lighting-and-darkness.md) · [zoning, programme, circulation](01_research/design/zoning-programme-and-circulation.md) · [dome theatre](01_research/design/dome-theatre.md) · [exhibits and interactivity](01_research/design/exhibits-and-interactivity.md) · [materials and finishes](01_research/design/materials-and-finishes.md)
+- Spaces and services: [room-by-room guide](01_research/design/room-by-room-guide.md) · [services, HVAC, acoustics, fire](01_research/design/services-hvac-acoustics-fire.md)
+- Science: [astronomy primer](01_research/astronomy-primer.md) · [glossary](00_project/glossary.md)
 - Standards: [codes and accessibility](01_research/standards/codes-and-accessibility.md)
 - Case studies: [case studies](01_research/case-studies/case-studies.md)
 - All sources: [sources/SOURCES.md](sources/SOURCES.md)

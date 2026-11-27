@@ -20,5 +20,6 @@
 
 ## Log
 
+- 27 Nov 2026: research handbook published (24 topics, search, copy buttons); 7 new topics added: room-by-room guide, services, astronomy primer, review checklists, report outline, viva questions, glossary.
 - 27 Nov 2026: 32-slide project presentation made from this research (link in README).
 - 27 Nov 2026: repository set up; research knowledge base v1 (Claude).
