@@ -1,0 +1,379 @@
+<title>Ritu Thesis Handbook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F1E7; --surface:#FFFCF5; --surface2:#EFE7D6; --ink:#1B2233; --soft:#4A5168; --faint:#6B7085;
+  --line:#DDD3BF; --accent:#85570C; --accent-bg:#F3E3BF; --gold:#E0A63A; --night:#0D1322; --dusk:#2E3654;
+  --hl:#F7E08A; --shadow:0 1px 2px rgba(27,34,51,.06),0 4px 16px rgba(27,34,51,.06);
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Public Sans',system-ui,-apple-system,Segoe UI,sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0D1322; --surface:#141B2E; --surface2:#1B2338; --ink:#EDE6D6; --soft:#C2BCAE; --faint:#9A968C;
+    --line:#2A3350; --accent:#E8B656; --accent-bg:#2C2A22; --hl:#6B5418; --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0D1322; --surface:#141B2E; --surface2:#1B2338; --ink:#EDE6D6; --soft:#C2BCAE; --faint:#9A968C;
+  --line:#2A3350; --accent:#E8B656; --accent-bg:#2C2A22; --hl:#6B5418; --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:84px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;-webkit-text-size-adjust:100%}
+a{color:var(--accent)}
+.ladder{height:4px;background:linear-gradient(90deg,#F7E3B0,#E0A63A 18%,#B98A5A 36%,#8A93AE 55%,#2E3654 78%,#0D1322)}
+header.top{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.topin{display:flex;align-items:center;gap:12px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);min-width:0}
+.brand svg{flex:none}
+.brand b{font-family:var(--serif);font-size:24px;font-weight:700;white-space:nowrap;letter-spacing:.2px}
+.brand small{display:block;font-size:12px;color:var(--faint);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search{flex:1;max-width:520px;margin-left:auto;position:relative}
+.search input{width:100%;font:inherit;font-size:15px;padding:9px 12px 9px 36px;border:1px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink)}
+.search input:focus{outline:2px solid var(--gold);outline-offset:1px}
+.search svg{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--faint)}
+.iconbtn{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:10px;height:40px;min-width:40px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font:inherit;font-size:14px;padding:0 10px}
+.iconbtn:hover{border-color:var(--gold)}
+#menuBtn{display:none}
+.wrap{display:grid;grid-template-columns:280px minmax(0,1fr);max-width:1320px;margin:0 auto}
+aside.side{position:sticky;top:61px;align-self:start;height:calc(100vh - 61px);overflow:auto;padding:20px 16px 40px 16px;border-right:1px solid var(--line)}
+.side .home{display:block;font-weight:600;text-decoration:none;color:var(--ink);padding:8px 10px;border-radius:8px;margin-bottom:6px}
+.ng{margin:18px 10px 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.side ul{list-style:none;margin:0;padding:0}
+.side li a{display:block;padding:6px 10px;border-radius:8px;text-decoration:none;color:var(--soft);font-size:15px;line-height:1.35}
+.side a:hover{background:var(--surface2);color:var(--ink)}
+.side a.on{background:var(--accent-bg);color:var(--ink);font-weight:600;box-shadow:inset 3px 0 0 var(--gold)}
+main{padding:28px max(16px,env(safe-area-inset-right,0px)) 80px max(16px,env(safe-area-inset-left,0px));min-width:0}
+.inner{max-width:860px;margin:0 auto}
+/* home */
+.hero{background:var(--night);color:#EDE6D6;border-radius:18px;padding:40px 36px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,#F7E3B0 0,#E0A63A 18%,rgba(107,74,42,.5) 42%,rgba(13,19,34,0) 70%)}
+.hero>*{position:relative}
+.hero .eb{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#E0A63A;margin:0 0 10px;font-weight:600}
+.hero h1{font-family:var(--serif);font-size:clamp(34px,6vw,54px);line-height:1.05;margin:0 0 12px;font-weight:700}
+.hero p{margin:0 0 6px;color:#C9C2B2;max-width:620px}
+.hero .line{font-family:var(--serif);font-style:italic;font-size:24px;color:#F0C46A;margin-top:14px}
+.hero .who{font-size:13px;color:#9A968C;margin-top:18px}
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:22px 0}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow)}
+.fact b{display:block;font-family:var(--serif);font-size:30px;line-height:1.1;color:var(--accent)}
+.fact span{font-size:13px;color:var(--soft);line-height:1.4;display:block;margin-top:4px}
+.how{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:8px 0 6px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.box h3{margin:0 0 6px;font-size:16px}
+.box p,.box li{font-size:14.5px;color:var(--soft);margin:0}
+.box ul{margin:0;padding-left:18px}
+.cg{font-family:var(--serif);font-size:26px;margin:30px 0 10px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px}
+.card{display:flex;flex-direction:column;gap:4px;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow);transition:border-color .15s,transform .15s}
+.card:hover{border-color:var(--gold);transform:translateY(-1px)}
+.ct{font-weight:600;line-height:1.3}
+.cd{font-size:14px;color:var(--soft);line-height:1.4}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--soft)}
+/* topic */
+.kicker{margin:0;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.topic h1{font-family:var(--serif);font-size:clamp(34px,5vw,46px);line-height:1.08;margin:4px 0 6px}
+.dek{color:var(--soft);font-size:18px;margin:0 0 14px}
+.tbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.toc{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:22px}
+.toc p{margin:0 0 6px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
+.toc ul{margin:0;padding:0;list-style:none;columns:2;column-gap:28px}
+.toc li{font-size:15px;break-inside:avoid;padding:2px 0}
+.toc a{text-decoration:none}
+.toc a:hover{text-decoration:underline}
+.sec{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:6px 22px 14px;margin-bottom:16px;box-shadow:var(--shadow)}
+.sec.intro{background:transparent;border:0;box-shadow:none;padding:0 2px;color:var(--soft)}
+.sh{display:flex;align-items:flex-start;gap:12px;justify-content:space-between;position:sticky;top:61px;background:var(--surface);padding-top:12px;z-index:2}
+.sec h2{font-family:var(--serif);font-size:28px;line-height:1.15;margin:0 0 8px}
+.sec h3{font-size:17px;margin:18px 0 4px}
+.content p,.content li{max-width:72ch}
+.content ul,.content ol{padding-left:22px}
+.content li{margin:3px 0}
+.content strong{color:var(--ink)}
+.content pre{background:var(--surface2);border-radius:10px;padding:12px 14px;overflow:auto;font-size:12.5px;line-height:1.5}
+.content code{font-size:.9em;background:var(--surface2);padding:1px 5px;border-radius:5px}
+.content pre code{background:none;padding:0}
+.content hr{border:0;border-top:1px solid var(--line);margin:18px 0}
+.tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.45}
+th,td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+th{background:var(--surface2);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:0}
+.copy{flex:none;font:inherit;font-size:13px;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;padding:5px 11px;cursor:pointer;margin-top:4px}
+.copy:hover{border-color:var(--gold)}
+.copy.big{font-size:14px;padding:8px 14px;background:var(--accent-bg);border-color:transparent}
+.copy.done{background:#2F7D4F;color:#fff;border-color:#2F7D4F}
+.ctag{display:inline-block;font-size:11px;font-weight:700;line-height:1;padding:3px 5px;border-radius:5px;vertical-align:1px;margin:0 1px;cursor:help}
+.ctag-A{background:#DCEFE2;color:#1E5C35}.ctag-B{background:#DDE7F5;color:#244A80}.ctag-C{background:#EDE4F5;color:#5A3780}.ctag-K{background:#F6E2C6;color:#7A4A0B}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .ctag{filter:brightness(.92)}}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:26px}
+.pn a{flex:1;max-width:48%;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;color:var(--ink)}
+.pn a:hover{border-color:var(--gold)}
+.pn small{display:block;color:var(--faint);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.pn .nx{text-align:right;margin-left:auto}
+/* search */
+#results{display:none}
+body.searching #results{display:block}
+body.searching #home, body.searching .topic{display:none !important}
+.res{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+.res:hover{border-color:var(--gold)}
+.res .rt{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.res .rh{font-weight:600;display:block;margin:2px 0}
+.res .rs{font-size:14px;color:var(--soft);display:block}
+mark{background:var(--hl);color:inherit;border-radius:3px;padding:0 1px}
+.flash{animation:flash 1.6s ease}
+@keyframes flash{0%{box-shadow:0 0 0 3px var(--gold)}100%{box-shadow:var(--shadow)}}
+.toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:10px;font-size:14px;opacity:0;transition:.2s;pointer-events:none;z-index:50}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.scrim{display:none}
+@media (max-width:980px){
+  .wrap{grid-template-columns:minmax(0,1fr)}
+  #menuBtn{display:inline-flex}
+  aside.side{position:fixed;left:0;top:0;bottom:0;height:100vh;width:min(300px,86vw);background:var(--bg);z-index:40;transform:translateX(-102%);transition:transform .2s;border-right:1px solid var(--line);padding-top:24px}
+  body.menu aside.side{transform:none}
+  body.menu .scrim{display:block;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:30}
+  .facts{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .brand small{display:none}
+  .brand b{font-size:20px}
+  .topin{flex-wrap:wrap}
+  .search{order:3;flex-basis:100%;max-width:none}
+  html{scroll-padding-top:126px}
+  aside.side{top:0}
+  .sh{position:static}
+  .hero{padding:28px 22px}
+  .how{grid-template-columns:1fr}
+  .toc ul{columns:1}
+  .sec{padding:4px 16px 12px}
+  .sec h2{font-size:24px}
+  .pn{flex-direction:column}.pn a{max-width:none}
+  th{white-space:normal}
+}
+@media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
+</style>
+
+<div class="ladder" aria-hidden="true"></div>
+<header class="top">
+  <div class="topin">
+    <button class="iconbtn" id="menuBtn" type="button" aria-label="Open topics menu" aria-expanded="false">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+    <a class="brand" href="#home">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#F7E3B0"/><stop offset=".5" stop-color="#E0A63A"/><stop offset="1" stop-color="#2E3654"/></linearGradient></defs><circle cx="16" cy="16" r="14" fill="#0D1322"/><path d="M16 2a14 14 0 0 1 0 28z" fill="url(#lg)" transform="rotate(180 16 16)"/><circle cx="23" cy="10" r="1.2" fill="#EDE6D6"/><circle cx="21" cy="22" r=".9" fill="#EDE6D6"/></svg>
+      <span><b>Thesis Handbook</b><small>Astronomy Interactive Museum, Kodaikanal</small></span>
+    </a>
+    <div class="search" role="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search everything, e.g. lux, dome, humidity" aria-label="Search the handbook" autocomplete="off">
+    </div>
+    <button class="iconbtn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+<div class="scrim" id="scrim"></div>
+<div class="wrap">
+  <aside class="side" id="side" aria-label="Topics">
+    <a class="home" href="#home" data-nav="home">Home</a>
+    {{NAV}}
+  </aside>
+  <main>
+    <div class="inner">
+      <section id="results" aria-live="polite"></section>
+
+      <div id="home">
+        <div class="hero">
+          <p class="eb">B.Des Interior Design capstone · Sathyabama · 2026-27</p>
+          <h1>Astronomy Interactive Museum</h1>
+          <p>Kodaikanal, beside the Kodaikanal Solar Observatory and the Rose Garden.</p>
+          <p class="line">Chiaroscuro: a journey from sunlight into the dark</p>
+          <p class="who">Research handbook for Rithikaa P.B. · Draft, 27 Nov 2026 · 24 topics</p>
+        </div>
+
+        <div class="facts">
+          <div class="fact"><b>1899</b><span>KSO founded next door; Evershed effect found here in 1909</span></div>
+          <div class="fact"><b>10.2° N</b><span>Latitude; the noon Sun is overhead around mid-April and late August</span></div>
+          <div class="fact"><b>≈3,100 m²</b><span>Gross area estimate; ≈2,500 m² net programme</span></div>
+          <div class="fact"><b>500 → 0 lux</b><span>The light ladder, from the Sun Gallery to the star chamber</span></div>
+        </div>
+
+        <div class="how">
+          <div class="box">
+            <h3>How to use this</h3>
+            <ul>
+              <li>Click any topic on the left (or the menu on a phone).</li>
+              <li>Search finds a word in every topic at once.</li>
+              <li>Each section has a <b>Copy</b> button: paste straight into a sheet, PPT or report.</li>
+            </ul>
+          </div>
+          <div class="box">
+            <h3>How sure is each fact?</h3>
+            <div class="legend">
+              <span><span class="ctag ctag-A">A</span> official or primary</span>
+              <span><span class="ctag ctag-B">B</span> reputable secondary</span>
+              <span><span class="ctag ctag-C">C</span> aggregator</span>
+              <span><span class="ctag ctag-K">K</span> general knowledge, check first</span>
+            </div>
+            <p style="margin-top:8px">Everything is a <b>Draft</b> until you or your guide confirm it. Full links are under All sources.</p>
+          </div>
+        </div>
+        <div class="box" style="margin-top:12px">
+          <h3>Also made for this project</h3>
+          <p>The 32-slide project presentation: <a href="https://claude.ai/artifact/37hQQEv5xssxzEUDVdK9eT" target="_blank" rel="noopener">open the deck</a>. Start with <a href="#brief">the brief</a>, then the <a href="#checklists">review checklists</a> for whatever review is next.</p>
+        </div>
+
+        {{CARDS}}
+      </div>
+
+      {{ARTICLES}}
+    </div>
+  </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  var ORDER = {{ORDER}};
+  var $ = function(s,r){return (r||document).querySelector(s)};
+  var $$ = function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var home = $('#home'), q = $('#q'), results = $('#results');
+
+  // Theme
+  var root = document.documentElement;
+  try{ var t = localStorage.getItem('rh-theme'); if(t) root.setAttribute('data-theme', t); }catch(e){}
+  $('#themeBtn').addEventListener('click', function(){
+    var cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    var nx = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', nx);
+    try{ localStorage.setItem('rh-theme', nx); }catch(e){}
+  });
+
+  // Menu
+  function closeMenu(){ document.body.classList.remove('menu'); $('#menuBtn').setAttribute('aria-expanded','false'); }
+  $('#menuBtn').addEventListener('click', function(){
+    var open = document.body.classList.toggle('menu');
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  $('#scrim').addEventListener('click', closeMenu);
+
+  // Prev / next
+  ORDER.forEach(function(o, k){
+    var pn = $('#' + o[0] + ' .pn'); if(!pn) return;
+    var h = '';
+    if(k > 0) h += '<a href="#' + ORDER[k-1][0] + '"><small>Previous</small>' + ORDER[k-1][1] + '</a>';
+    if(k < ORDER.length - 1) h += '<a class="nx" href="#' + ORDER[k+1][0] + '"><small>Next</small>' + ORDER[k+1][1] + '</a>';
+    pn.innerHTML = h;
+  });
+
+  // Routing
+  function show(hash){
+    var id = (hash || '').replace(/^#/, '');
+    var topicId = id.split('--')[0] || 'home';
+    var art = topicId !== 'home' ? document.getElementById(topicId) : null;
+    if(!art || !art.classList.contains('topic')) { topicId = 'home'; art = null; }
+    $$('.topic').forEach(function(a){ a.hidden = a !== art; });
+    home.hidden = !!art;
+    $$('[data-nav]').forEach(function(a){ a.classList.toggle('on', a.getAttribute('data-nav') === topicId); });
+    document.title = art ? art.getAttribute('data-title') + ' · Ritu Thesis Handbook' : 'Ritu Thesis Handbook';
+    closeMenu();
+    var target = id.indexOf('--') > 0 ? document.getElementById(id) : null;
+    if(target){
+      requestAnimationFrame(function(){
+        target.scrollIntoView({block:'start'});
+        target.classList.remove('flash'); void target.offsetWidth; target.classList.add('flash');
+      });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }
+  window.addEventListener('hashchange', function(){ clearSearch(); show(location.hash); });
+
+  // Copy
+  var toastT;
+  function toast(msg){ var t = $('#toast'); t.textContent = msg; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(function(){ t.classList.remove('show'); }, 1600); }
+  function textOf(el){
+    var c = el.cloneNode(true);
+    $$('.copy, .toc, .pn, .tbar', c).forEach(function(n){ n.remove(); });
+    $$('table', c).forEach(function(tb){
+      var rows = $$('tr', tb).map(function(tr){ return $$('th,td', tr).map(function(td){ return td.textContent.trim(); }).join('\t'); }).join('\n');
+      var p = document.createElement('pre'); p.textContent = '\n' + rows + '\n'; tb.replaceWith(p);
+    });
+    $$('li', c).forEach(function(li){ li.insertBefore(document.createTextNode('• '), li.firstChild); });
+    $$('h1,h2,h3,p,li,pre,section', c).forEach(function(n){ n.appendChild(document.createTextNode('\n')); });
+    return c.textContent.replace(/\n{3,}/g, '\n\n').trim();
+  }
+  function fallbackCopy(txt){
+    var ta = document.createElement('textarea'); ta.value = txt; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select(); var ok = false;
+    try{ ok = document.execCommand('copy'); }catch(e){}
+    ta.remove(); return ok;
+  }
+  document.addEventListener('click', function(e){
+    var b = e.target.closest('.copy'); if(!b) return;
+    var el = document.getElementById(b.getAttribute('data-copy')); if(!el) return;
+    var txt = textOf(el);
+    if(el.classList.contains('topic')) txt = txt + '\n\nSource: Ritu Thesis Handbook (Draft)';
+    var done = function(){ var o = b.textContent; b.textContent = 'Copied'; b.classList.add('done'); toast('Copied. Paste it anywhere.'); setTimeout(function(){ b.textContent = o; b.classList.remove('done'); }, 1500); };
+    var fail = function(){ if(fallbackCopy(txt)) done(); else toast('Copy blocked here. Select the text and copy it instead.'); };
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(done, fail); }
+      else fail();
+    }catch(err){ fail(); }
+  });
+
+  // Search index (per section)
+  var index = $$('.topic').map(function(a){
+    return $$('.sec', a).map(function(s){
+      var h = $('h2', s);
+      return { id: s.id, topic: a.getAttribute('data-title'), head: h ? h.textContent : a.getAttribute('data-title'), text: (function(){ var c = s.cloneNode(true); $$('.copy,h2', c).forEach(function(n){ n.parentNode.removeChild(n); }); return c.textContent.replace(/\s+/g,' ').trim(); })() };
+    });
+  }).reduce(function(x,y){ return x.concat(y); }, []);
+  function esc(s){ return s.replace(/[&<>"]/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); }
+  function clearSearch(){ if(q.value){ q.value = ''; } document.body.classList.remove('searching'); results.innerHTML = ''; }
+  function run(){
+    var v = q.value.trim();
+    if(v.length < 2){ document.body.classList.remove('searching'); results.innerHTML = ''; return; }
+    var words = v.toLowerCase().split(/\s+/).filter(Boolean);
+    var hits = [];
+    index.forEach(function(it){
+      var low = (it.head + ' ' + it.text).toLowerCase();
+      if(!words.every(function(w){ return low.indexOf(w) >= 0; })) return;
+      var score = words.reduce(function(s,w){ return s + (it.head.toLowerCase().indexOf(w) >= 0 ? 5 : 0) + (it.topic.toLowerCase().indexOf(w) >= 0 ? 3 : 0) + low.split(w).length - 1; }, 0);
+      var p = it.text.toLowerCase().indexOf(words[0]);
+      var start = Math.max(0, p - 70), snip = (start ? '… ' : '') + it.text.substr(start, 220) + '…';
+      hits.push({it: it, score: score, snip: snip});
+    });
+    hits.sort(function(a,b){ return b.score - a.score; });
+    var re = new RegExp('(' + words.map(function(w){ return w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'); }).join('|') + ')', 'gi');
+    var h = '<p class="kicker" style="margin-bottom:12px">' + hits.length + ' result' + (hits.length === 1 ? '' : 's') + ' for “' + esc(v) + '”</p>';
+    if(!hits.length) h += '<div class="box"><p>Nothing found. Try a shorter word, such as “dome”, “lux” or “ramp”.</p></div>';
+    hits.slice(0, 60).forEach(function(x){
+      h += '<a class="res" href="#' + x.it.id + '"><span class="rt">' + esc(x.it.topic) + '</span><span class="rh">' + esc(x.it.head).replace(re,'<mark>$1</mark>') + '</span><span class="rs">' + esc(x.snip).replace(re,'<mark>$1</mark>') + '</span></a>';
+    });
+    results.innerHTML = h;
+    document.body.classList.add('searching');
+    window.scrollTo(0,0);
+  }
+  var deb; q.addEventListener('input', function(){ clearTimeout(deb); deb = setTimeout(run, 120); });
+  q.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ clearSearch(); q.blur(); } });
+  results.addEventListener('click', function(e){
+    var a = e.target.closest('a.res'); if(!a) return;
+    var href = a.getAttribute('href');
+    e.preventDefault(); clearSearch();
+    if(location.hash === href) show(href); else location.hash = href;
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === '/' && document.activeElement !== q && !/input|textarea/i.test(document.activeElement.tagName)){ e.preventDefault(); q.focus(); }
+  });
+
+  show(location.hash);
+})();
+</script>
